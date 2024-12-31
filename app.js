@@ -7,6 +7,8 @@ app.use(morgan('dev'));
 app.use (express.json());
 app.use(express.urlencoded({extended: true}));
 
+console.log(process.env.GOOGLE_USER);
+
 const secure = require('./app/v1/middelewares/secure');
 app.use (secure);
 
